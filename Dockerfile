@@ -33,7 +33,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
 
 # Build a cowrie environment from github master HEAD.
 RUN su - ${COWRIE_USER} -c "\
-      git clone --separate-git-dir=/tmp/cowrie.git http://github.com/cowrie/cowrie ${COWRIE_HOME}/cowrie-git && \
+      git clone --separate-git-dir=/tmp/cowrie.git http://github.com/Panjks/cowrie ${COWRIE_HOME}/cowrie-git && \
       cd ${COWRIE_HOME} && \
         python3 -m venv cowrie-env && \
         . cowrie-env/bin/activate && \
