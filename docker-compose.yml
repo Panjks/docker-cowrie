@@ -6,11 +6,12 @@ volumes:
 
 services:
   cowrie:
+    container_name: cowrie
     restart: always
-    image: .
     ports:
-      - "2222:2222"
-      - "2223:2223"
+     - "22:2222"
+     - "23:2223"
+    image: "cowrie:latest"
     volumes:
-      - cowrie-etc:/cowrie/cowrie-git/etc
-      - cowrie-var:/cowrie/cowrie-git/var
+     - cowrie-etc:/cowrie/cowrie-git/etc
+     - cowrie-var:/cowrie/cowrie-git/var

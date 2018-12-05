@@ -3,7 +3,7 @@
 # `runtime` is stripped down.
 
 FROM debian:stretch-slim as builder
-LABEL maintainer="Michel Oosterhof <michel@oosterhof.net>"
+LABEL maintainer="Panjks- <panjks@163.com>"
 
 ENV COWRIE_GROUP=cowrie \
     COWRIE_USER=cowrie \
@@ -44,7 +44,7 @@ RUN su - ${COWRIE_USER} -c "\
         pip install --no-cache-dir --upgrade -r ${COWRIE_HOME}/cowrie-git/requirements-output.txt"
 
 FROM debian:stretch-slim AS runtime
-LABEL maintainer="Michel Oosterhof <michel@oosterhof.net>"
+LABEL maintainer="Panjks- <panjks@163.com>"
 
 ENV COWRIE_GROUP=cowrie \
     COWRIE_USER=cowrie \
