@@ -72,7 +72,7 @@ ENV DOCKER=yes
 
 USER ${COWRIE_USER}
 WORKDIR ${COWRIE_HOME}/cowrie-git
-VOLUME [ "/cowrie/cowrie-git/var", "/cowrie/cowrie-git/etc" ]
+# VOLUME [ "/cowrie/cowrie-git/var", "/cowrie/cowrie-git/etc" ]
 ENTRYPOINT [ "cowrie" ]
 CMD [ "start", "-n" ]
 EXPOSE 2222 2223

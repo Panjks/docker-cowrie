@@ -1,9 +1,5 @@
 version: '3'
 
-volumes:
-  cowrie-etc:
-  cowrie-var:
-
 services:
   cowrie:
     container_name: cowrie
@@ -12,6 +8,3 @@ services:
      - "22:2222"
      - "23:2223"
     image: "cowrie:latest"
-    volumes:
-     - cowrie-etc:/cowrie/cowrie-git/etc
-     - cowrie-var:/cowrie/cowrie-git/var
