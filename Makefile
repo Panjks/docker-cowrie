@@ -26,7 +26,7 @@ clean:
 	docker rmi ${IMAGENAME}
 
 shell:
-	docker exec -it ${CONTAINERNAME} bash
+	docker exec -it -u root ${CONTAINERNAME} bash
 
 logs:
 	docker logs ${CONTAINERNAME}
