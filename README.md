@@ -9,18 +9,17 @@
 进行了以下修改。
 
 1. `Dockerfile`中作为builder的`debian:stable`镜像安装requests库。
-2. 修改`build.sh`，实现自动化安装docker-compose的脚本和重新安装cowrie docker的。
-3. 将docker的端口映射改为`22:2222`和`23:2223`，并将`run.sh`脚本改为使用docker-compose运行。
+3. 将docker的端口映射改为`22:2222`和`23:2223`。
 
 ## 使用说明
 
 0. 由于使用到了docker as builder多阶段构建特性，安装的docker版本必须大于`17.05`！！！
 
 1. 从github中下载该仓库。`git clone https://github.com/Panjks/docker-cowrie `。
-2. 进入下载的目录，运行`build.sh`建立镜像。
+2. 进入下载的目录，运行`make all`建立镜像。
 3. 建立docker volumes相关文件夹。`mkdir -p /var/lib/docker/volumes/cowrie_cowrie-etc/_data`
 4. 将修改好的cowrie配置文件命名为`cowrie.cfg`并放在`/var/lib/docker/volumes/cowrie_cowrie-etc/_data`文件夹下。
-5. 运行`run.sh`
+5. 运行`make run`
 
 ## 注意事项
 
