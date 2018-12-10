@@ -8,7 +8,7 @@
 
 进行了以下修改。
 
-1. `Dockerfile`中作为builder的`debian:stable`镜像安装requests库。
+1. `Dockerfile`中作为builder的`debian:stretch-slim`镜像安装requests库。
 3. 将docker的端口映射改为`22:2222`和`23:2223`。
 
 ## 使用说明
@@ -24,7 +24,7 @@
 ## 注意事项
 
 0. 由于使用到了docker as builder多阶段构建特性，安装的docker版本必须大于`17.05`！！！
-2. 由于`docker-compose.yml`配置文件中暂时将端口映射改为了`22:2222`和`23:2223`，所以使用前**务必**将ssh端口和Telnet端口更换，或者修改该配置文件中的端口映射。
+2. 由于暂时将端口映射改为了`22:2222`和`23:2223`，所以使用前**务必**将ssh端口和Telnet端口更换，或者修改该配置文件中的端口映射。
 
 ## 相关路径
 
